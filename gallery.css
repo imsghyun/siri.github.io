@@ -1,0 +1,95 @@
+  /* Slider container */
+  .slider {
+    overflow: hidden;
+    width: 100%;
+    max-width: 1000px; /* Increase max width for larger slider */
+    position: relative;
+    margin: auto; /* Center slider */
+}
+
+
+        /* Image list */
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        /* Image slide */
+        .slide {
+            flex: 0 0 100%;
+            width: 100%;
+            height: auto;
+        }
+
+        /* Previous/Next buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: 20px; /* Increased padding */
+            z-index: 100;
+            user-select: none;
+            font-size: 30px; /* Increased font size */
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        /* Slide thumbnails */
+        .thumbnails {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px; /* Increased margin */
+            flex-wrap: wrap; /* Allow thumbnails to wrap to next line if necessary */
+        }
+
+        .thumbnail {
+            width: 100px; /* Increased width */
+            height: auto;
+            margin-right: 10px; /* Increased margin */
+            cursor: pointer;
+            opacity: 0.6;
+        }
+
+        .thumbnail:last-child {
+            margin-right: 0;
+        }
+
+        .thumbnail.active {
+            border: 2px solid #000;
+            opacity: 1;
+        }
+
+        /* Video player */
+        .video-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            margin-bottom: 50px;
+        }
+
+        .video-player {
+    width: 100%;
+    max-width: 1000px; /* Increase max width for larger video player */
+    margin-top: 50px;
+}
+
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .prev, .next {
+                padding: 10px; /* Adjusted for smaller screens */
+                font-size: 20px; /* Adjusted for smaller screens */
+            }
+            .thumbnail {
+                width: 80px; /* Adjusted for smaller screens */
+            }
+        }
